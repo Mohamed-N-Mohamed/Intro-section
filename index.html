@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+
+          container: {
+            padding: '1rem',
+
+          },
+          screens: {
+            lg: "1124px",
+            xl: "1124px",
+            "2xl": "1124px",
+          },
+          colors: {
+            'Almost-White': 'hsl(0, 0%, 98%)',
+            'Medium-Gray': 'hsl(0, 0%, 41%)',
+            'Almost-Black': 'hsl(0, 0%, 8%)',
+
+          },
+
+          backgroundImage: {
+            'mobile': "url('/images/image-hero-mobile.png')",
+            'desktop': "url('/images/image-hero-desktop.png')",
+          },
+          height: {
+            '128': '100vh',
+          }
+
+
+
+        },
+      },
+      plugins: [],
+    }
+  </script>
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container mx-4">
+      <div class="navbar-mobile flex p-4 justify-between item-center md:hidden">
+        <div class="snap">
+          <img src="/images/logo.svg" alt="">
+
+        </div>
+
+        <div class="mobile-icon">
+          <img src="/images/icon-menu.svg" alt="">
+
+        </div>
+      </div>
+
+      <div class="navbar-desktop hidden md:py-4 md:flex md:gap-2 md:items-center">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="">
+        </div>
+
+
+        <div class="links grow px-12 text-sm font-light">
+          <ul class="flex gap-3 items-center">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+
+
+        <div class="login-register text-sm font-light">
+          <ul class="flex gap-4 items-center">
+            <li class=""><a href="#">Login</a></li>
+            <div class="active ">
+              <li class="px-2 py-2 rounded-r-lg rounded-l-lg border border-black"><a href="#"> Register</a></li>
+            </div>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+    </nav>
+  </header>
+
+
+  <section class="main-content ">
+    <div class="container mx-auto md:py-8">
+      <div class="hero-section md:flex md:justify-center md:items-center md:flex-row-reverse">
+        <!--add desktop image when screen size changes-->
+        <div class="hero-background">
+          <img src="/images/image-hero-mobile.png" alt="">
+        </div>
+
+        <div class="hero-content py-6">
+          <h1 class="text-5xl font-black  text-center md:text-left ">Make remote work</h1>
+
+          <p class="pt-6 text-center text-lg px-6 font-light md:text-left md:px-0">Get your team in sync, no matter your
+            location. Streamline
+            processes,
+            create team rituals, and watch productivity soar.</p>
+
+          <div class="hero-button text-center py-6 md:text-left">
+            <a href="#" class="py-2 px-4 rounded-r-lg rounded-l-lg border bg-black text-white text-lg ">Learn more</a>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="flex gap-6 justify-center items-center pt-6 md:justify-start">
+        <div>
+          <img src="/images/client-databiz.svg" alt="">
+        </div>
+
+        <div>
+          <img src="/images/client-audiophile.svg" alt="">
+        </div>
+
+        <div>
+          <img src="/images/client-meet.svg" alt="">
+        </div>
+
+        <div>
+          <img src="/images/client-maker.svg" alt="">
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
